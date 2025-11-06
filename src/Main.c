@@ -1,4 +1,14 @@
-#include "/home/codeleaded/System/Static/Container/Vector.h"
+#if defined(__linux__)
+    #include "/home/codeleaded/System/Static/Container/Vector.h"
+#elif defined(_WINE)
+    #include "/home/codeleaded/System/Static/Container/Vector.h"
+#elif defined(_WIN32)
+    #include "F:/home/codeleaded/System/Static/Container/Vector.h"
+#elif defined(__APPLE__)
+    #error "Apple not supported!"
+#else
+    #error "Platform not supported!"
+#endif
 
 int main(int argc,char **argv){
     
